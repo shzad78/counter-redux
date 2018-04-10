@@ -4,27 +4,23 @@ import PropTypes from 'prop-types';
 import { addOneToCounter, subtractOneToCounter } from '../actions'
 
  class App extends Component {
-  constructor() {
-    super();
-    
-  }
-
+  
   
   render() {
-    console.log('state is ' ,this.props.store.getState())
+    console.log('state is ' ,this.props)
     return (
       <div className="app container">
         <h2>Counter Example</h2>
         <button
           className="btn btn-primary"
           style={{marginRight:'20px'}}
-          onClick={()=>this.props.subtractOneToCounter()}
+          onClick={this.props.addOneToCounter}
         >
           Increment
         </button>
         <button
           className="btn btn-danger"
-          onClick={()=>this.props.addOneToCounter()}
+          onClick={this.props.subtractOneToCounter}
         >
           Decrement
         </button>
