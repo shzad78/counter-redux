@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { addOneToCounter, subtractOneToCounter } from '../actions'
+import {addOnetoCounter, subtractOnetoCounter}  from '../actions'
 
  class App extends Component {
   
@@ -14,31 +14,34 @@ import { addOneToCounter, subtractOneToCounter } from '../actions'
         <button
           className="btn btn-primary"
           style={{marginRight:'20px'}}
-          onClick={this.props.addOneToCounter}
+          onClick={this.props.addOnetoCounter}
         >
           Increment
         </button>
         <button
           className="btn btn-danger"
-          onClick={this.props.subtractOneToCounter}
+          onClick={this.props.subtractOnetoCounter}
         >
           Decrement
         </button>
 
-        <h2>Value: { this.props.counter}</h2>
+        <h2>Value: {this.props.counter }</h2>
 
       </div>
     );
   }
 };
 
-
-
-
-function mapStateToProps({counter}) {
+function mapStateToProps ({counter }) {
   return {
     counter
+    
   };
-}
+};
 
-export default connect(mapStateToProps,{addOneToCounter,subtractOneToCounter})(App);
+
+  
+
+export default connect(mapStateToProps, {addOnetoCounter, subtractOnetoCounter})(App);
+
+

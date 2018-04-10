@@ -1,15 +1,13 @@
 import { addOne, subtractOne } from '../constants'
 
-export function addOneToCounter() {
-  return {
-    type: addOne,
-    payload: 1
+export function addOnetoCounter(){
+  return { 
+    type: addOne
   }
-};
 
-export function subtractOneToCounter() {
-  return {
-    type: subtractOne,
-    payload: 1
-  }
-};
+}
+export function subtractOnetoCounter(){
+   return { 
+     type: subtractOne
+   }
+}

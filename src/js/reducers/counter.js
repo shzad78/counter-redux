@@ -1,13 +1,18 @@
 import { addOne, subtractOne } from '../constants'
 
-const counter = function(state=0, action) {
-  if(action.type === addOne) {
-    return state + action.payload
-  }
-  if(action.type === subtractOne) {
-    return state - action.payload
-  }
-  return state;
+const counter= function(state=0, action ){
+
+switch (action.type){
+case addOne: 
+    {
+return state +1
+}
+case subtractOne:
+ {
+return state - 1
 }
 
-export default counter;
+}
+return state;
+}
+export default counter ;
